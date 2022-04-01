@@ -19,7 +19,7 @@ public class Postagem {
 
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private long idPost;
+		private Long idPost;
 
 		@NotBlank
 		@Size(min = 5, max = 100, message = "O campo título deve conter no mínimo 5 e no máximo 100 caracteres.")
@@ -32,11 +32,10 @@ public class Postagem {
 		@UpdateTimestamp
 		private LocalDateTime data;
 		
-
 		private String foto;
 		
 		@NotNull
-		private int contato;
+		private Long contato;
 		
 		@NotNull
 		private double valor;
@@ -44,11 +43,11 @@ public class Postagem {
 		@NotNull
 		private String tipoTurismo;
 
-		public long getIdPost() {
+		public Long getIdPost() {
 			return idPost;
 		}
 
-		public void setIdPost(long idPost) {
+		public void setIdPost(Long idPost) {
 			this.idPost = idPost;
 		}
 
@@ -84,11 +83,11 @@ public class Postagem {
 			this.foto = foto;
 		}
 
-		public int getContato() {
+		public Long getContato() {
 			return contato;
 		}
 
-		public void setContato(int contato) {
+		public void setContato(Long contato) {
 			this.contato = contato;
 		}
 
