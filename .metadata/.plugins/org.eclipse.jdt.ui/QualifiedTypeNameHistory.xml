@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.UpdateTimestamp"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
+    <fullyQualifiedTypeName name="org.generation.farmacia.repository.ProdutoRepository"/>
+    <fullyQualifiedTypeName name="org.generation.farmacia.model.Produto"/>
+    <fullyQualifiedTypeName name="org.generation.farmacia.repository.CategoriaRepository"/>
+    <fullyQualifiedTypeName name="org.generation.farmacia.model.Categoria"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.Null"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+</qualifiedTypeNameHistroy>
