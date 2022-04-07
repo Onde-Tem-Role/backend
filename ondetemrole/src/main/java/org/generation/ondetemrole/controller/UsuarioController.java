@@ -48,11 +48,6 @@ import org.springframework.web.bind.annotation.RestController;
 			return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 		}
 		
-		@GetMapping("/email/{email}")
-		public ResponseEntity<List<Usuario>> getByEmail(@PathVariable String email) {
-			return ResponseEntity.ok(repository.findAllByEmailContainingIgnoreCase(email));
-			
-		}
 		
 		@PostMapping 
 		public ResponseEntity<Usuario> post(@RequestBody @Valid Usuario Usuario) {
