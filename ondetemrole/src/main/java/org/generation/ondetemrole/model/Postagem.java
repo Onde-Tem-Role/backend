@@ -22,7 +22,7 @@ public class Postagem {
 
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private Long idPost;
+		private Long id;
 
 		@NotBlank
 		@Size(min = 5, max = 100, message = "O campo título deve conter no mínimo 5 e no máximo 100 caracteres.")
@@ -53,13 +53,13 @@ public class Postagem {
 		@ManyToOne
 		@JsonIgnoreProperties("postagem")
 		private Tema tema;
-		
-		public Long getIdPost() {
-			return idPost;
+
+		public Long getId() {
+			return id;
 		}
 
-		public void setIdPost(Long idPost) {
-			this.idPost = idPost;
+		public void setId(Long id) {
+			this.id = id;
 		}
 
 		public String getLocal() {
@@ -117,5 +117,20 @@ public class Postagem {
 		public void setTipoTurismo(String tipoTurismo) {
 			this.tipoTurismo = tipoTurismo;
 		}
-	
-}
+
+		public Usuario getUsuario() {
+			return usuario;
+		}
+
+		public void setUsuario(Usuario usuario) {
+			this.usuario = usuario;
+		}
+
+		public Tema getTema() {
+			return tema;
+		}
+
+		public void setTema(Tema tema) {
+			this.tema = tema;
+		}
+}	

@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -22,12 +23,14 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idUsuario;
+	private long id;
 
 	@NotBlank (message = "O nome é obrigatório.")
 	@Size(min = 3, max = 100, message = "O campo deve conter mais de 3 caracteres.")
 	private String nome;
 	
+	@Email
+	private String usuario;
 	
 	@NotBlank (message = "Senha obrigatória!")
 	@Size(min = 8, message = "O campo deve conter mais de 8 caracteres.")
@@ -42,12 +45,12 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 
-	public long getIdUsuario() {
-		return idUsuario;
+	public long getId() {
+		return id;
 	}
 
-	public void setIdUsuario(long idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -90,6 +93,11 @@ public class Usuario {
 		this.postagem = postagem;
 	}
 
-	
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
 }
-	
