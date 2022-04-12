@@ -11,9 +11,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 
 
 
@@ -29,7 +32,9 @@ public class Usuario {
 	@Size(min = 3, max = 100, message = "O campo deve conter mais de 3 caracteres.")
 	private String nome;
 	
-	@Email
+	@Schema(example="email@email.com.br")
+	@NotNull(message = "O e-mail é obrigatório!")
+	@Email(message = "Insira um email válido!")
 	private String usuario;
 	
 	@NotBlank (message = "Senha obrigatória!")
